@@ -15,7 +15,6 @@ class IosTimePicker extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 80,
         centerTitle: true,
-        backgroundColor: Colors.white,
         title: Text(
           "Time Picker Ios",
           style: TextStyle(color: Colors.black),
@@ -29,7 +28,7 @@ class IosTimePicker extends StatelessWidget {
                 null)
                 ? "0:0:0"
                 : '${Provider.of<IosTimeProvider>(context, listen: true).timeIos.toString().split('.').first.padLeft(8, "0")}',
-            style: TextStyle(fontSize: 30),
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
           CupertinoTimerPicker(
             onTimerDurationChanged: (value) {

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -30,6 +31,12 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          textTheme: TextTheme(
+            bodyLarge: TextStyle(
+              color: Colors.amber,
+                  fontSize: 35,
+            )
+          ),
           appBarTheme: AppBarTheme(
             backgroundColor: Colors.green.shade200
           ),
@@ -44,7 +51,8 @@ class MyApp extends StatelessWidget {
                 weekdayStyle: TextStyle(color: Colors.black)),
             timePickerTheme: TimePickerThemeData(
                 dialHandColor: Color(0xff5f9e45),
-                dayPeriodColor: Colors.amber.withOpacity(0.5)))
+                dayPeriodColor: Colors.amber.withOpacity(0.5)),
+        )
             .copyWith(
           colorScheme: ColorScheme.fromSwatch(
             brightness: Brightness.light,
