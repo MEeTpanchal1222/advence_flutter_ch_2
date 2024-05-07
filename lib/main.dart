@@ -2,8 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '2_1/action_sheet/ios/view/ios_dialog_box.dart';
 import '2_1/date_picker/ios/ios_ui_screen_1.dart';
 import '2_1/date_picker/android/ui_screen_1.dart';
+import '2_1/dialog_box/andriod/provider/provider_dialoge.dart';
+import '2_1/dialog_box/andriod/view/dialoge_box.dart';
+
 import '2_1/time_picker/andriod/ui_screen_2.dart';
 import '2_1/time_picker/ios/provider/provider_for_time_picker.dart';
 import '2_1/time_picker/ios/view/ios_time_picker.dart';
@@ -20,9 +24,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        // ChangeNotifierProvider(
-        //   create: (context) => AndroidDialogProvider(),
-        // ),
+         ChangeNotifierProvider(
+          create: (context) => AndroidDialogProvider(),
+         ),
         ChangeNotifierProvider(
           create: (context) => IosTimeProvider(),
         )
@@ -59,12 +63,14 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.amber
           ),
         ),
-        initialRoute: '/i-time',
+        initialRoute: '/dialoge',
         routes: {
           '/date':(context) =>datepicker(),
           '/i-date':(context) => IosDatePicker(),
           '/time':(context) =>TimePicker(),
           '/i-time':(context) =>IosTimePicker(),
+          '/dialoge':(context) =>DialogBoxAndroid(),
+          '/i-actionsheet':(context)=>ActionSheet(),
         },
       ),
     );
