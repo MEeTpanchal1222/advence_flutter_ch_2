@@ -10,6 +10,8 @@ class datepicker extends StatefulWidget {
 }
 
 class _datepickerState extends State<datepicker> {
+  get select => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +23,7 @@ class _datepickerState extends State<datepicker> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Text("$select as string"),
             IconButton(onPressed: () async {
               DateTime select = await showDatePicker(context: context,
                   initialDate: DateTime.now(),

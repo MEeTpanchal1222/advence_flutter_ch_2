@@ -11,9 +11,11 @@ import '2_1/dialog_box/andriod/view/dialoge_box.dart';
 import '2_1/time_picker/andriod/ui_screen_2.dart';
 import '2_1/time_picker/ios/provider/provider_for_time_picker.dart';
 import '2_1/time_picker/ios/view/ios_time_picker.dart';
+import '2_2/adptive_widget/adptive.dart';
+
 
 void main() {
-  runApp(const MyApp());
+  runApp( adptive());
 }
 
 class MyApp extends StatelessWidget {
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
          ),
         ChangeNotifierProvider(
           create: (context) => IosTimeProvider(),
-        )
+        ),
       ],
 
       child: MaterialApp(
@@ -76,3 +78,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+
