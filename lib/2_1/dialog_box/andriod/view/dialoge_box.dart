@@ -9,10 +9,10 @@ class DialogBoxAndroid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF4E7E6),
+      backgroundColor: Colors.blue.shade50,
       appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Color(0xffF4E7E6),
+        backgroundColor: Colors.blue.shade50,
         centerTitle: true,
         title: Text(
           "Dialog Box",
@@ -25,7 +25,7 @@ class DialogBoxAndroid extends StatelessWidget {
             showDialog(
               context: context,
               builder: (context) => AlertDialog(
-                backgroundColor: Color(0xffffdede),
+                backgroundColor: Colors.blue.shade50,
                 title: Text("Phone Ringtone"),
                 actions: [
                   TextButton(
@@ -34,14 +34,14 @@ class DialogBoxAndroid extends StatelessWidget {
                       },
                       child: Text(
                         'Cancel',
-                        style: TextStyle(color: Colors.pinkAccent),
+                        style: TextStyle(color: Colors.blueAccent),
                       )),
                   TextButton(
                       onPressed: () {
                         Navigator.pop(context);
                       },
                       child: Text('ok',
-                          style: TextStyle(color: Colors.pinkAccent)))
+                          style: TextStyle(color: Colors.blueAccent)))
                 ],
                 content: Container(
                   height: 220,
@@ -121,12 +121,12 @@ class DialogBoxAndroid extends StatelessWidget {
           child: Text(
             "Show Dialog",
             style: TextStyle(
-              color: Colors.pinkAccent,
+              color: Colors.blueAccent,
               fontSize: 23,
               fontWeight: FontWeight.bold,
               decoration: TextDecoration.underline,
               decorationStyle: TextDecorationStyle.solid,
-              decorationColor: Colors.pinkAccent,
+              decorationColor: Colors.blueAccent,
             ),
           ),
         ),

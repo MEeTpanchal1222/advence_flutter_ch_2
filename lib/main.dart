@@ -11,9 +11,13 @@ import '2_1/dialog_box/andriod/view/dialoge_box.dart';
 import '2_1/time_picker/andriod/ui_screen_2.dart';
 import '2_1/time_picker/ios/provider/provider_for_time_picker.dart';
 import '2_1/time_picker/ios/view/ios_time_picker.dart';
+import '2_2/adptive/adptive.dart';
+import '2_2/provider/provider_adptive.dart';
+
+
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -29,7 +33,10 @@ class MyApp extends StatelessWidget {
          ),
         ChangeNotifierProvider(
           create: (context) => IosTimeProvider(),
-        )
+        ),
+        ChangeNotifierProvider(
+          create: (context) => SwitchProvider(),
+        ),
       ],
 
       child: MaterialApp(
@@ -38,7 +45,7 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             bodyLarge: TextStyle(
               color: Colors.amber,
-                  fontSize: 35,
+                  fontSize: 25,
             )
           ),
           appBarTheme: AppBarTheme(
@@ -49,7 +56,7 @@ class MyApp extends StatelessWidget {
                 dayForegroundColor: MaterialStateProperty.all(Colors.white),
                 yearForegroundColor: MaterialStateProperty.all(Colors.white),
                 todayBorder: BorderSide(
-                  color: Colors.redAccent,
+                  color: Colors.blueAccent,
                 ),
                 yearStyle: TextStyle(color: Colors.black),
                 weekdayStyle: TextStyle(color: Colors.black)),
@@ -63,7 +70,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.amber
           ),
         ),
-        initialRoute: '/dialoge',
+        initialRoute: '/adeptive',
         routes: {
           '/date':(context) =>datepicker(),
           '/i-date':(context) => IosDatePicker(),
@@ -71,8 +78,12 @@ class MyApp extends StatelessWidget {
           '/i-time':(context) =>IosTimePicker(),
           '/dialoge':(context) =>DialogBoxAndroid(),
           '/i-actionsheet':(context)=>ActionSheet(),
+          '/adeptive' :(context)=> AdaptiveMaterialCupertino()
         },
       ),
     );
   }
 }
+
+
+
