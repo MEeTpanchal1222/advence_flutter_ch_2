@@ -28,7 +28,7 @@ class ActionSheetOpen extends StatelessWidget {
               child: const Text(
                 'Cancel',
                 style: TextStyle(
-                  color: Colors.pinkAccent,
+                  color: Colors.blueAccent,
                 ),
               ),
             ),
@@ -38,7 +38,7 @@ class ActionSheetOpen extends StatelessWidget {
                 child: const Text(
                   'Profiteroles',
                   style: TextStyle(
-                    color: Colors.pinkAccent,
+                    color: Colors.blueAccent,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -50,7 +50,7 @@ class ActionSheetOpen extends StatelessWidget {
                 child: const Text(
                   'Cannolis',
                   style: TextStyle(
-                    color: Colors.pinkAccent,
+                    color: Colors.blueAccent,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -62,7 +62,7 @@ class ActionSheetOpen extends StatelessWidget {
                 child: const Text(
                   'Trifle',
                   style: TextStyle(
-                    color: Colors.pinkAccent,
+                    color: Colors.blueAccent,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -75,14 +75,14 @@ class ActionSheetOpen extends StatelessWidget {
         );
       },
       child: const Text(
-        "Show Action Sheet",
+        " Action_Sheet",
         style: TextStyle(
-          color: Colors.pinkAccent,
+          color: Colors.blueAccent,
           fontSize: 23,
           fontWeight: FontWeight.bold,
           decoration: TextDecoration.underline,
           decorationStyle: TextDecorationStyle.solid,
-          decorationColor: Colors.pinkAccent,
+          decorationColor: Colors.blueAccent,
         ),
       ),
     );
